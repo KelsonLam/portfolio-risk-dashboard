@@ -1,0 +1,19 @@
+# Default configuration for the portfolio risk dashboard.
+
+holdings:
+  AAPL: 0.25
+  MSFT: 0.20
+  AMZN: 0.15
+  JPM: 0.15
+  JNJ: 0.15
+  XOM: 0.10
+
+period:
+  start: "2015-01-01"
+  end: "2024-12-31"
+
+risk:
+  confidence: 0.95     # VaR / CVaR confidence level
+  rolling_window: 63   # trading days for the rolling volatility panel (about a quarter)
+
+risk_free_rate: 0.02   # annualized
