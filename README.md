@@ -95,6 +95,20 @@ and the HTML report to `results/`.
   horizons is not as simple as multiplying by the square root of time once
   returns are not independent.
 
+## Component VaR
+
+Portfolio VaR is a single number. `component_var.py` splits it into additive
+per-holding pieces that sum back to the total, so you can see who actually owns
+the risk, not just who owns the capital.
+
+```python
+from risk_dashboard.component_var import component_var
+component_var(weights, asset_returns, confidence=0.95)  # weight, component_var, var_share
+```
+
+It is the VaR analogue of the volatility risk decomposition, and the shares sum
+to one.
+
 ## Tests
 
 ```bash
